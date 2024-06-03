@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
+.anim-card{
+    font-family:"Rubik", sans-serif; ;
+  position: relative;
+  height: 450px;
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+  background-position: top center;
+  margin: 10px;
+  transition: 1s;
+}
+body{
+    background-color: black;
+}
+img{
+  width: 100%;
+}
+
+.my-card-21 {
+  background-image: url(кайбо.jpg);
+}
+.my-card-22 {
+  background-image: url(koty-v-yaponsʹkiy-kulʹturi3.jpg);
+
+}
+.my-card-23 {
+  background-image: url(bakeneko.jpg);
+}
+.my-card-24 {
+  background-image: url(tanyki.jpg);
+}
+.my-card-25 {
+  background-image: url(zzz.jpg);
+}
+.my-card-26 {
+  background-image: url(tangy.webp);
+}
+.my-card-27 {
+  background-image: url(ooooo.jpg);
+}
+
+.content {
+  position:absolute;
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+  transition:1s;
+  z-index: 1;
+  color: rgb(54, 54, 54);
+  top: 60%;
+}
+.content .title{
+    font-size: 1.3rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+}
+.anim-card:hover{
+    background-position: bottom center;
+}
+.anim-card:hover .content{
+   top: 10%;
+  color: aliceblue;
+}
+.kaibo{
+    text-decoration: none;
+    font-weight: 100;
+    text-shadow: 0px 0px 6px #da0000;
+    color: rgb(0, 0, 0);
+    font-weight: 80;
+}
+.makine{
+    text-decoration: none;
+    font-weight: 100;
+    text-shadow: 0px 0px 5px #ff0000bd;
+    color:  rgb(0, 0, 0); 
+}
+.bakeneko{
+    text-decoration: none;
+    font-weight: 100;
+    text-shadow: 0px 0px 5px #ff0000;
+    color:  rgb(0, 0, 0);
+}
+.tanyki{
+  text-decoration: none;
+    font-weight: 100;
+    text-shadow: 0px 0px 5px #ff0000;
+    color: rgb(0, 0, 0);
+}
+.tonouki{
+  text-decoration: none;
+  font-weight: 100;
+  text-shadow: 0px 0px 5px #ff0000;
+  color:  rgb(0, 0, 0);
+}
+.juremugo{
+  text-decoration: none;
+  font-weight: 100;
+  text-shadow: 0px 0px 5px #ff0000;
+  color: rgb(0, 0, 0);
+}
+.Rocuroki{
+  text-decoration: none;
+  font-weight: 100;
+  text-shadow: 0px 0px 5px #ff0e0e;
+  color:  rgb(0, 0, 0);
+}
+
+
+
+
+
+.swiper{
+  width: 100%;
+  /* height: 400px; */
+  color: aliceblue;
+}
+.swiper-button-next{
+ color: rgba(213, 0, 0, 0);
+ /* text-shadow: 0px 0px 1px #ffffff; */
+ font-weight: 900;
+}
+.instruction{
+  position: fixed;
+  /* height: 35%; */
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #191818;
+  z-index: 100600;
+  padding: 50px 0;
+}
+.close{
+  position: absolute;
+  top: 10px;
+  right:20px;
+  color: rgba(245, 245, 220, 0.138);
+  transition: 0.5s;
+}
+.close:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+  color: orange;
+}
+
