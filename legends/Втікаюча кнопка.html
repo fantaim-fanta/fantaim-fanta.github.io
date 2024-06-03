@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гра</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="shortcut icon" href="hea.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: rgba(41, 25, 255, 0.527);
+        }
+        * {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .button-wrapper {
+            width: 700px;
+            height: 400px;
+            padding: 50px;
+            background-color: rgb(64, 0, 255);
+            border: 2px solid rgb(255, 255, 255);
+            box-sizing: content-box;
+            position: relative;
+            margin: auto;
+        }
+
+        #no {
+            padding: 5px;
+            font-size: 18px;
+            position: absolute;
+            transition: all 0.07s linear 0s;
+        }
+
+        #no:hover {
+            cursor: pointer;
+        }
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgb(180, 185, 255);
+            height: 100vh;
+            width: 100%;
+            z-index: 1000;
+            transition: 9.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .preloader h2 {
+            font-size: 4em;
+            letter-spacing: 20px;
+            animation: preloader-anim 2s infinite alternate;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        @keyframes preloader-anim {
+            0% {
+                color: rgb(255, 0, 0);
+            }
+
+            10% {
+                color: orangered;
+            }
+
+            20% {
+                color: rgb(255, 196, 0);
+            }
+
+            30% {
+                color: rgb(81, 255, 0);
+            }
+
+            40% {
+                color: rgb(50, 205, 205)
+            }
+
+            50% {
+                color: rgb(17, 0, 255);
+            }
+
+            60% {
+                color: rgb(179, 50, 205)
+            }
+
+            70% {
+                color: rgb(255, 0, 170);
+            }
+
+            80% {
+                color: rgba(255, 0, 0, 0.665);
+            }
+
+        }
+      
+        .eptek{
+             font-family: "Kanit", sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="preloader">
+    <div>
+        <h2>Let`s play!!! </h2> 
+    </div>
+</div>    <h2 class="eptek" style="text-align: center;">Пограй</h2>
+    <div class="button-wrapper">
+        <button id="no">(●'◡'●)</button>
+    </div>
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-auto d-flex flex-wrap">
+                <a href="love-history.html" class="left" style="text-align: center;">History</a>
+                <a href="index.html" class="top" style="text-align: center;">Головна</a>
+                <a href="mifologya.html" class="right " style="text-align: center ;">Mifologhi</a>
+                
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let elemLeft, elemTop, maxElemLeft, maxElemTop, elem, wrapper;
+        elem = document.querySelector('#no');
+        wrapper = document.querySelector('.button-wrapper');
+        maxElemLeft = wrapper.clientWidth - elem.offsetWidth;
+        maxElemTop = wrapper.clientHeight - elem.offsetHeight;
+        
+        elem.addEventListener('mousemove', handler)
+        function handler() {
+            elemLeft = Math.random() * maxElemLeft;
+            elem.style.left = elemLeft + 'px';
+
+            elemTop = Math.random() * maxElemTop;
+            elem.style.top = elemTop + 'px';
+        }
+        elem.onclick = () => {
+            let theEnd = document.createElement('div');
+            theEnd.style.width = '200px';
+            theEnd.style.height = '100px';
+            theEnd.style.paddingTop = '5px';
+            theEnd.style.borderRadius = '10px';
+            theEnd.style.margin = '10px auto';
+            theEnd.innerHTML = '<h2>Молодець!</h2>'
+            theEnd.style.textAlign = 'center';
+            theEnd.style.background = 'lightgreen';
+            wrapper.after(theEnd);
+        }
+    </script>
+    <script>
+        window.addEventListener('load', function () {
+              let preloader = document.querySelector('.preloader');
+              window.setTimeout(() => {
+                  preloader.style.opacity = 0;
+              }, 1000)
+              window.setTimeout(() => {
+                  preloader.style.display = 'none';
+              }, 3000)
+          })
+       
+      </script>
+</body>
+
+</html>

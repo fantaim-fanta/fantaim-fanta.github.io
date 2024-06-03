@@ -1,0 +1,48 @@
+.top {
+
+    width: 230px;
+
+    padding: 10px 60px;
+    border: none;
+    background-color: #ffffff28;
+    color: #000000c6;
+
+    text-align: center;
+    font-weight: 900;
+
+}
+
+.left {
+    width: 230px;
+    padding: 10px 60px;
+    border: none;
+    background-color: #ffffff28;
+    color:#000000c6;
+    text-align: center;
+    font-weight: 900;
+}
+
+.right {
+    width: 230px;
+    padding: 10px 60px;
+    border: none;
+    background-color: #ffffff28;
+    color: #000000c6;
+    text-align: center;
+    font-weight: 900;
+}
+
+.left:hover,
+.right:hover,
+.top:hover {
+    color:#000000c6;
+    background-color: #57575792;
+    cursor: pointer;
+}
+
+.left,
+.right,
+.top {
+    margin: 20px;
+    display: block;
+}
